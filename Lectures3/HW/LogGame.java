@@ -13,7 +13,7 @@ public class LogGame {
 
     FileHandler fh = new FileHandler("D:\\GeekBrains\\Языки програмирования\\Java\\JavaOop\\Lectures3\\HW\\LogFile.log");
 
-    public Log() throws IOException {
+    public LogGame() throws IOException {
     }
 
     void addLog() {

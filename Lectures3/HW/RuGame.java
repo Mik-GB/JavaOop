@@ -18,7 +18,7 @@ public class RuGame extends AbstractGame{
     }
 
     @Override
-    void playGame(Log log) throws IOException {
+    void playGame(LogGame log) throws IOException {
         Scanner scanner = new Scanner(System.in);
         RuGame ruGame = new RuGame();
         System.out.println("Введите длину слова: ");
@@ -30,7 +30,7 @@ public class RuGame extends AbstractGame{
         while (ruGame.getGameStatus().equals(GameStatus.START)) {
             System.out.println("Введите ваш вариант: ");
             String value = scanner.nextLine().toLowerCase();
-            Answer answer = ruGame.imputValue(value);
+            Answer answer = ruGame.inputValue(value);
             log.addLogMove(value);
             if (answer != null) {
                 System.out.println("Вы нашли: быки: " + answer.bull + " коровы: " + answer.cow + ". Количество попыток: " + answer.numTry);

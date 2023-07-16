@@ -1,7 +1,5 @@
 package Lectures3.HW;
 
-import lombok.extern.java.Log;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +17,7 @@ public class NumberGame extends AbstractGame {
         return result;
     }
     @Override
-    void playGame(Log log) throws IOException {
+    void playGame(LogGame log) throws IOException {
         Scanner scanner = new Scanner(System.in);
         NumberGame numberGame = new NumberGame();
         System.out.println("Введите длину слова: ");
@@ -31,7 +29,7 @@ public class NumberGame extends AbstractGame {
         while (numberGame.getGameStatus().equals(GameStatus.START)) {
             System.out.println("Введите ваш вариант: ");
             String value = scanner.nextLine();
-            Answer answer = numberGame.imputValue(value);
+            Answer answer = numberGame.inputValue(value);
             log.addLogMove(value);
             if (answer != null) {
                 System.out.println("Вы нашли: быки: " + answer.bull + " коровы: " + answer.cow + ". Количество попыток: " + answer.numTry);

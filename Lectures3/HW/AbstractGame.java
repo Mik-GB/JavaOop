@@ -68,5 +68,5 @@ public abstract class AbstractGame implements Game {
         }
         return result;
     }
-    abstract void playGame(Log log) throws IOException;
+    abstract void playGame(LogGame log) throws IOException;
 }

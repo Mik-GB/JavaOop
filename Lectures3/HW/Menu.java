@@ -1,14 +1,14 @@
 package Lectures3.HW;
 
-import lombok.extern.java.Log;
+
 
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
     void menu() throws IOException {
-        Log log = new Log();
-        log.addLog();
+        LogGame logGame = new LogGame();
+        logGame.addLog();
         Scanner scanner = new Scanner(System.in);
         boolean flag = true;
         while (flag) {
@@ -19,8 +19,8 @@ public class Menu {
                     "");
             int menuNumber = scanner.nextInt();
             switch (menuNumber) {
-                case 1 -> newGame(log);
-                case 2 -> log.printLogConsole();
+                case 1 -> newGame(logGame);
+                case 2 -> logGame.printLogConsole();
                 case 3 -> flag = false;
             }
         }
@@ -28,7 +28,7 @@ public class Menu {
 
     }
 
-    void newGame(Log log) throws IOException {
+    void newGame(LogGame log) throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Выберите режим игры:\n" +
                 "1. Запустить игру с цифрами\n" +
